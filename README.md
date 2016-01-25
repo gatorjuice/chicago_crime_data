@@ -20,10 +20,42 @@ Or install it yourself as:
 
 ## Usage
 
-To get all Chicago crime data user this command
+To get all Chicago crime data use this command:
 
 ```Ruby
   crimes_data_set = ChicagoCrimeData::Crime.all
+```
+
+To search by one of many parameters for specific Chicago crime data use this command with any or all of the following hash keys:
+
+```Ruby
+    narrowed_data_set = ChicagoCrimeData::Crime.find(
+        {
+            case_number: [value],
+            primary_type: [value],
+            beat: [value],
+            year: [value],
+            description: [value],
+            x_coordinate: [value],
+            y_coordinate: [value],
+            block: [value],
+            primary_type: [value],
+            location_description: [value],
+            date: [value],
+            iucr: [value],
+            domestic: [value],
+            id: [value],
+            ward: [value],
+            arrest: [value],
+            updated_on: [value],
+            fbi_code: [value],
+            longitude: [value],
+            latitude: [value],
+            year: [value],
+            community_area: [value],
+            district: [value]
+        }
+    )
 ```
 
 ## Development
